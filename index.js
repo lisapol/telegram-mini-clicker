@@ -1,4 +1,4 @@
-const { Telegraf } = require('telegraf');
+import { Telegraf } from 'telegraf';
 const botToken = process.env.BOT_TOKEN;
 
 bot.start((ctx) => {
