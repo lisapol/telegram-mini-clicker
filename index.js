@@ -1,6 +1,15 @@
 import { Telegraf } from 'telegraf';
+
 const botToken = process.env.BOT_TOKEN;
 
+if (!botToken) {
+  throw new Error('❌ BOT_TOKEN is not set in environment variables!');
+}
+
+// ✅ Define the bot before using it
+const bot = new Telegraf(botToken);
+
+// Handle /start command
 bot.start((ctx) => {
   ctx.reply("Click below to open the Mini App 👇", {
     reply_markup: {
@@ -16,4 +25,7 @@ bot.start((ctx) => {
   });
 });
 
+// Launch the bot
 bot.launch();
+
+console.log("✅ Bot is running...");
