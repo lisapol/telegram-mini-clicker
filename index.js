@@ -1,4 +1,6 @@
 import { Telegraf } from 'telegraf';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const botToken = process.env.BOT_TOKEN;
 
